@@ -7,6 +7,16 @@
     <title>Inline Editor Demo</title>
 </head>
 <body>
+    <div id="editor">
+        Notice that throughout the configuration we use Node's built-in <a href="https://nodejs.org/api/path.html">path module</a> and prefix it with the <a href="https://nodejs.org/docs/latest/api/globals.html#globals_dirname">__dirname</a> global. This prevents file path issues between operating systems and allows relative paths to work as expected. See <a href="https://nodejs.org/api/path.html#path_windows_vs_posix">this section</a> for more info on POSIX vs. Windows paths.
+    </div>
 
+    <script src="../dist/index.js"></script>
+
+    <script>
+        const doc = document.getElementById('editor');
+
+        new window.Editor(doc);
+    </script>
 </body>
 </html>
