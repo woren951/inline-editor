@@ -1,15 +1,18 @@
+import Document from './tools/Document';
+import Toolbar from './tools/Toolbar';
+
 class Editor {
-    /**
-     * @private
-     * @type {HTMLDivElement}
-     */
-    private document;
+    private document: Document;
+
+    private toolbar: Toolbar;
 
     /**
-     * @param {HTMLDivElement} document
+     * @param {HTMLElement} root
      */
-    constructor(document: HTMLDivElement) {
-        this.document = document;
+    constructor(root: HTMLElement) {
+        this.document = new Document(root);
+
+        this.toolbar = new Toolbar();
     }
 }
 
