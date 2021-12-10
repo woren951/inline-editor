@@ -7,6 +7,16 @@
     <title>Inline Editor Demo</title>
 </head>
 <body>
+    <div id="editor">
+        To write the webpack configuration in <a href="http://www.typescriptlang.org/">TypeScript</a>, you would first install the necessary dependencies, i.e., TypeScript and the relevant type definitions from the <a href="https://definitelytyped.org/">DefinitelyTyped</a> project:
+    </div>
 
+    <script src="../dist/index.js"></script>
+
+    <script>
+        const doc = document.getElementById('editor');
+
+        window.Editor = new window.WIEditor(doc);
+    </script>
 </body>
 </html>
